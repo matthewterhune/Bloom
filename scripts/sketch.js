@@ -49,7 +49,7 @@ function draw() {
 }
 
 function mousePressed() {
-  document.getElementById("info").style.display = 'none';
+  document.getElementById("info").classList.add('hidden');
   wind = [random(-40, 40), random(-40, 10)];
   flowers.push(new Flower(random(.9, 1.3)));
   active = 0;

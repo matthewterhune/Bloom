@@ -4,17 +4,19 @@ body {
 
 #info {
 	position: fixed;
-	top: 30%;
+	top: 40%;
 	width: 100%;
 	color: #EE6666;
 	padding: 1rem;
 	font-family: Verdana, Geneva, sans-serif;
-	/*border-top: 1px solid #DD6666;
-	border-bottom: 1px solid #DD6666;*/
 	font-size: 1.5em;
 	text-align: center;
 	box-sizing: border-box;
 	padding-right: 3em;
+}
+
+#info:hover {
+	cursor: default;
 }
 
 #reset {
@@ -28,4 +30,10 @@ body {
 
 #reset:hover {
 	cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
 }
