@@ -39,6 +39,7 @@ createCanvas(windowWidth, windowHeight);
   frameRate(30);
   if (check) {
     phone = 200;
+    imageSize = 200;
   } else {
     phone = 100;
   }
@@ -60,7 +61,7 @@ function draw() {
 function mousePressed() {
   document.getElementById("info").classList.add('hidden');
   wind = [random(-40, 40), random(-40, 10)];
-  flowers.push(new Flower(random(.9, 1.3)));
+  flowers.push(new Flower(random(.9, 1.3)*phone/100));
   active = 0;
   loop();
 }
