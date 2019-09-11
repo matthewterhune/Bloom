@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+}
+
+#info {
+	position: fixed;
+	top: 30%;
+	width: 100%;
+	color: #EE6666;
+	padding: 1rem;
+	font-family: Verdana, Geneva, sans-serif;
+	/*border-top: 1px solid #DD6666;
+	border-bottom: 1px solid #DD6666;*/
+	font-size: 1.5em;
+	text-align: center;
+	box-sizing: border-box;
+	padding-right: 3em;
+}
+
+#reset {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+}
+
+#reset:hover {
+	cursor: pointer;
+}

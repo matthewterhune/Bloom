@@ -49,6 +49,7 @@ function draw() {
 }
 
 function mousePressed() {
+  document.getElementById("info").style.display = 'none';
   wind = [random(-40, 40), random(-40, 10)];
   flowers.push(new Flower(random(.9, 1.3)));
   active = 0;
@@ -67,4 +68,10 @@ function keyPressed() {
     }
     toggle = true;
   }
+}
+
+function resetFlowers() {
+  flowers = [];
+  active = 200;
+  background('white');
 }
