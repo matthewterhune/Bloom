@@ -164,7 +164,7 @@ function Flower(scale) {
   }
 
   this.draw = function() {
-    if (this.counter < 80) {
+    if (this.counter < steps) {
       pg.clear();
       for (let i=0; i<3; i++) {
         this.leaves[i].draw();
@@ -175,10 +175,10 @@ function Flower(scale) {
       for (i=0; i<20; i++) {
         this.stamens[i].draw();
       }
-      image(pg, this.x-phone, this.y-phone, this.x+phone, this.y+phone);
+      image(pg, this.x-phone, this.y-phone, phone*2, phone*2);
       this.counter++;
     } else {
-      image(pg, this.x-phone, this.y-phone, this.x+phone, this.y+phone);
+      image(pg, this.x-phone, this.y-phone, phone*2, phone*2);
     }
   }
 }
