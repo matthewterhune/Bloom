@@ -33,6 +33,11 @@ createCanvas(windowWidth, windowHeight);
   noFill();
   wind = [random(-40, 40), random(-40, 10)];
   frameRate(30);
+  if (windowWidth < 480) {
+    phone = 200;
+  } else {
+    phone = 100;
+  }
 }
 
 function draw() {

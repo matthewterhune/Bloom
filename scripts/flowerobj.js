@@ -175,10 +175,10 @@ function Flower(scale) {
       for (i=0; i<20; i++) {
         this.stamens[i].draw();
       }
-      image(pg, this.x-100, this.y-100);
+      image(pg, this.x-phone, this.y-phone, this.x+phone, this.y+phone);
       this.counter++;
     } else {
-      image(pg, this.x-100, this.y-100);
+      image(pg, this.x-phone, this.y-phone, this.x+phone, this.y+phone);
     }
   }
 }
