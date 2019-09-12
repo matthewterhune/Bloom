@@ -60,7 +60,11 @@ function Leaf(scale, pg, tscale) {
 function Stamen(scale, pg, tscale) {
   this.drawing = pg;
   this.ts = tscale;
-  this.bscale = scale;
+  if (check) {
+    this.bscale = 2;
+  } else {
+    this.bscale = 1;
+  }
   colorMode(HSB);
   this.strokec = color(random(40,60), random(20, 100), random(100, 150));
   colorMode(RGB);
