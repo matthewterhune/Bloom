@@ -1,5 +1,3 @@
-imageSize = 100;
-
 function polar(x) {
   return [x[0] * cos(x[1]), x[0] * sin(x[1])];
 }
@@ -142,6 +140,9 @@ function Flower(scale) {
   this.y = mouseY;
   this.counter = 0;
   let pg = createGraphics(imageSize*2, imageSize*2);
+  if (check) {
+    pg.strokeWeight(2);
+  }
   let i;
 
   let dc = 0
@@ -175,10 +176,10 @@ function Flower(scale) {
       for (i=0; i<20; i++) {
         this.stamens[i].draw();
       }
-      image(pg, this.x-phone, this.y-phone, phone*2, phone*2);
+      image(pg, this.x-imageSize, this.y-imageSize);
       this.counter++;
     } else {
-      image(pg, this.x-phone, this.y-phone, phone*2, phone*2);
+      image(pg, this.x-imageSize, this.y-imageSize);
     }
   }
 }
