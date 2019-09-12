@@ -60,6 +60,7 @@ function Leaf(scale, pg, tscale) {
 function Stamen(scale, pg, tscale) {
   this.drawing = pg;
   this.ts = tscale;
+  this.bscale = scale;
   colorMode(HSB);
   this.strokec = color(random(40,60), random(20, 100), random(100, 150));
   colorMode(RGB);
@@ -84,7 +85,7 @@ function Stamen(scale, pg, tscale) {
        this.cx2*this.ts+imageSize, this.cy2*this.ts+imageSize,
        this.x2*this.ts+imageSize, this.y2*this.ts+imageSize);
       this.drawing.fill(this.ballc);
-      this.drawing.circle(this.x2*this.ts+imageSize, this.y2*this.ts+imageSize, 5*this.ts);
+      this.drawing.circle(this.x2*this.ts+imageSize, this.y2*this.ts+imageSize, 5*this.bscale*this.ts);
     }
   }
 }
