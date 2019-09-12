@@ -52,12 +52,14 @@ createCanvas(windowWidth, windowHeight);
   if (check) {
     strokeWeight(2);
   }
+  fscache = createGraphics(windowWidth, windowHeight);
+  fscache.background('white');
 }
 
 function draw() {
   //leaf();
   if (active < steps) {
-    background('white');
+    image(fscache, 0, 0);
     for (let i=0; i<flowers.length; i++) {
         flowers[i].draw();
     }

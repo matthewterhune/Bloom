@@ -178,8 +178,11 @@ function Flower(scale) {
       }
       image(pg, this.x-imageSize, this.y-imageSize);
       this.counter++;
-    } else {
-      image(pg, this.x-imageSize, this.y-imageSize);
-    }
+      if (this.counter == steps) {
+        fscache.image(pg, this.x-imageSize, this.y-imageSize);
+      }
+    } //else {
+      //image(pg, this.x-imageSize, this.y-imageSize);
+    //}
   }
 }
