@@ -139,6 +139,7 @@ function Flower(scale) {
   this.x = mouseX;
   this.y = mouseY;
   this.counter = 0;
+  this.alive = true;
   let pg = createGraphics(imageSize*2, imageSize*2);
   if (check) {
     pg.strokeWeight(2);
@@ -180,6 +181,7 @@ function Flower(scale) {
       this.counter++;
       if (this.counter == steps) {
         fscache.image(pg, this.x-imageSize, this.y-imageSize);
+        this.alive = false;
       }
     } //else {
       //image(pg, this.x-imageSize, this.y-imageSize);
