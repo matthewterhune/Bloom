@@ -60,23 +60,7 @@ createCanvas(windowWidth, windowHeight);
 function draw() {
   //leaf();
   if (active < steps) {
-    fsrect = {x1: windowWidth, y1: windowHeight, x2: 0, y2: 0};
-    for (let i=0; i<flowers.length; i++) {
-        if (flowers[i].alive && (flowers[i].x - imageSize) < fsrect.x1) {
-          fsrect.x1 = flowers[i].x - imageSize;
-        }
-        if (flowers[i].alive && (flowers[i].y - imageSize) < fsrect.y1) {
-          fsrect.y1 = flowers[i].y - imageSize;
-        }
-        if (flowers[i].alive && (flowers[i].x + imageSize) > fsrect.x2) {
-          fsrect.x2 = flowers[i].x + imageSize;
-        }
-        if (flowers[i].alive && (flowers[i].y + imageSize) > fsrect.y2) {
-          fsrect.y2 = flowers[i].y + imageSize;
-        }
-    }
-    copy(fscache, fsrect.x1, fsrect.y1, (fsrect.x2-fsrect.x1), (fsrect.y2-fsrect.y1),
-                  fsrect.x1, fsrect.y1, (fsrect.x2-fsrect.x1), (fsrect.y2-fsrect.y1));
+    image(fscache, 0, 0);
     for (let i=0; i<flowers.length; i++) {
         flowers[i].draw();
     }
