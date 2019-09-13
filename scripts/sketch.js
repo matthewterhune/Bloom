@@ -17,32 +17,11 @@ if (check) {
 
 window.onload = function() {
   if (check) {
-    document.getElementById('info').classList.add('phone')
-    document.getElementById('reset').classList.add('phone')
+    document.getElementById('info').classList.add('phone');
+    document.getElementById('reset').classList.add('phone');
+    document.getElementById('about').classList.add('phone');
   }
 }
-
-/*function setup() {
-createCanvas(windowWidth, windowHeight);
-  background('#FFF');
-  noFill();
-  noLoop();
-  wind = [random(-40, 40), random(-40, 10)];
-  frameRate(10);
-}
-
-function draw() {
-  //leaf();
-}
-
-function mousePressed() {
-  wind = [random(-40, 40), random(-40, 10)];
-  flower(random(.9, 1.3));
-  loop();
-}
-function mouseReleased() {
-  noLoop();
-}*/
 
 function setup() {
 createCanvas(windowWidth, windowHeight);
@@ -58,7 +37,6 @@ createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  //leaf();
   if (active < steps) {
     image(fscache, 0, 0);
     for (let i=0; i<flowers.length; i++) {

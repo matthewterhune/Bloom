@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 #info {
@@ -8,7 +9,6 @@ body {
 	width: 100%;
 	color: #EE6666;
 	padding: 1rem;
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 1.5em;
 	text-align: center;
 	box-sizing: border-box;
@@ -46,4 +46,17 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s .5s, opacity .5s linear;
+}
+
+#about {
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 4em;
+	text-decoration: none;
+	color: #EE6666;;
+}
+
+#about.phone {
+	font-size: 6em;
 }

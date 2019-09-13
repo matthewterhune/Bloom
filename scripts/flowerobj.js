@@ -7,7 +7,6 @@ function Leaf(scale, pg, tscale) {
   this.ts = tscale;
   colorMode(HSB);
   this.strokec = color(random(70,80), random(100, 150), random(80, 100));
-  //this.strokec = color("white");
   colorMode(RGB);
   this.fillc = color(random(200,240), 255, random(200,240));
   let t = random(6.28);
@@ -17,8 +16,6 @@ function Leaf(scale, pg, tscale) {
   let curve = random(-.2, .2);
   this.cx2 = polar([r*.9,t+curve])[0];
   this.cy2 = polar([r*.9,t+curve])[1];
-  //this.cx2 = this.x2;
-  //this.cy2 = this.y2;
   let veins = 5;
   this.controls = [];
   let size = random(1.2, 1.6);
@@ -33,7 +30,6 @@ function Leaf(scale, pg, tscale) {
       this.ts += (1-this.ts)/14 + .005;
     }
     if (this.ts > 0) {
-      //this.drawing.colorMode(HSB);
       this.drawing.stroke(this.strokec);
       this.drawing.fill(this.fillc);
       this.drawing.beginShape();
@@ -101,8 +97,6 @@ function Petal(scale, pg, tscale) {
   this.fillc = color(random(320, 390), 60, random(150, 255), .6);
   this.ts = tscale;
   let veins = 7;
-  //this.x1 = mouseX;
-  //this.y1 = mouseY;
   this.tips = [];
   let t = random(6.28);
   let angle = random(1, 2);
@@ -120,7 +114,6 @@ function Petal(scale, pg, tscale) {
       this.ts += (1-this.ts)/14 + .005;
     }
     if (this.ts > 0) {
-      //this.drawing.colorMode(HSB);
       this.drawing.stroke(this.strokec);
       this.drawing.fill(this.fillc);
       this.drawing.beginShape();
@@ -160,7 +153,7 @@ function Flower(scale) {
   dc = 0
   for (i=0; i<5; i++) {
     this.petals.push(new Petal(scale, pg, dc));
-    dc -= random(.6);
+    dc -= random(1.6);
   }
   dc = 0;
   this.stamens = []
@@ -186,8 +179,6 @@ function Flower(scale) {
       if (this.counter == steps) {
         fscache.image(pg, this.x-imageSize, this.y-imageSize);
       }
-    } //else {
-      //image(pg, this.x-imageSize, this.y-imageSize);
-    //}
+    }
   }
 }
