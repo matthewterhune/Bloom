@@ -178,7 +178,9 @@ function Flower(scale) {
       this.counter++;
       if (this.counter == steps) {
         fscache.image(pg, this.x-imageSize, this.y-imageSize);
+        pg.remove();
       }
     }
   }
+
 }
