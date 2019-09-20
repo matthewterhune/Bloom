@@ -183,4 +183,8 @@ function Flower(scale) {
     }
   }
 
+  this.die = function() {
+    pg.remove();
+  }
+
 }

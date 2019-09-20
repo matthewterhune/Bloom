@@ -15,12 +15,14 @@ if (check) {
   imageSize = 100;
 }
 
+
 window.onload = function() {
   if (check) {
     document.getElementById('info').classList.add('phone');
     document.getElementById('reset').classList.add('phone');
     document.getElementById('about').classList.add('phone');
   }
+    document.getElementById('reset').onclick = resetFlowers;
 }
 
 function setup() {
@@ -71,7 +73,11 @@ function keyPressed() {
 }
 
 function resetFlowers() {
+  for (let i=0; i<flowers.length; i++) {
+      flowers[i].die();
+    }
   flowers = [];
   active = steps;
   background('white');
+  fscache.background('white');
 }
