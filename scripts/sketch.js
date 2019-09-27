@@ -57,20 +57,6 @@ function mousePressed() {
   active = 0;
   loop();
 }
-function mouseReleased() {
-}
-
-function keyPressed() {
-  if (toggle == true) {
-    background('white');
-    toggle = false;
-  } else {
-    for (let i=0; i<flowers.length; i++) {
-      flowers[i].draw();
-    }
-    toggle = true;
-  }
-}
 
 function resetFlowers() {
   for (let i=0; i<flowers.length; i++) {
