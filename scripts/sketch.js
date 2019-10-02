@@ -5,6 +5,7 @@ flowers = [];
 toggle = false;
 const steps = 80;
 active = steps;
+colorshift = 0;
 
 
 check = false;
@@ -66,4 +67,13 @@ function resetFlowers() {
   active = steps;
   background('white');
   fscache.background('white');
+}
+
+function keyTyped() {
+  if (key === 'a') {
+    colorshift += 5;
+  }
+  if (key === 's') {
+    colorshift -= 5; 
+  }
 }

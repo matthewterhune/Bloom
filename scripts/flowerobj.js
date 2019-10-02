@@ -93,8 +93,8 @@ function Stamen(scale, pg, tscale) {
 function Petal(scale, pg, tscale) {
   this.drawing = pg;
   colorMode(HSB);
-  this.strokec = color(0, 70, random(100, 200));
-  this.fillc = color(random(320, 390), 60, random(150, 255), .6);
+  this.strokec = color(0+colorshift, 70, random(100, 200));
+  this.fillc = color(random(320-colorshift, 390-colorshift), 60, random(150, 255), .6);
   this.ts = tscale;
   let veins = 7;
   this.tips = [];
